@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="Dịch" type="button" onclick="dictionary()" value="Dịch" width="50px"><br style="">
+<div>
+    <textarea id="English"></textarea> <textarea id="Vietnamese"></textarea>
+</div>
+</body>
+</html>
+<script>
+    /*    function dictionary() {
+            var english = ['book', 'notebook', 'table', 'window', 'computer']
+            var vietnamese = ['sách', 'vở', 'bàn', 'cửa sổ', 'máy tính']
+            for (i = 0; i < english.length; i++) {
+                let a = document.getElementById('English').value
+                if (a == english[i]) {
+                    document.getElementById('Vietnamese').innerHTML = vietnamese[i]
+                    break;
+                }
+            }
+        }*/
+    function dictionary() {
+        var english = ['book', 'notebook', 'table', 'window', 'computer']
+        var vietnamese = ['sách', 'vở', 'bàn', 'cửa sổ', 'máy tính']
+        let a = document.getElementById('English').value
+        console.log(english.indexOf(a))
+        if (english.indexOf(a)== -1) {
+            document.getElementById('Vietnamese').innerHTML = "Không tìm thấy"
+
+            console.log(english.indexOf(a))
+        } else {
+            console.log(english.indexOf(a))
+            document.getElementById('Vietnamese').innerHTML = vietnamese[english.indexOf(a)]
+        }
+    }
+</script>
